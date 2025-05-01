@@ -3,6 +3,7 @@ import styles from "./Hero.module.css";
 import { FaGithub, FaLinkedinIn, FaFacebook } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
 import Tilt from "react-parallax-tilt";
+import profileImage from "../img/puliphat.jpg";
 
 function Hero() {
   return (
@@ -26,32 +27,31 @@ function Hero() {
               />
             </p>
             <p className={styles.text_4}>
-              A passionate WebDeveloper who loves creating beautiful and
-              functional websites
-              <br /> I am motivated and open to learning new skill to
+              A passionate WebDeveloper who loves creating beautiful <br />and
+              functional websites, I am motivated and open to learning  <br />new skill to
               continually improve myself.
             </p>
             <ul id="skills" className={styles.hero_social}>
               <li>
-                <a href="#">
+                <a href="https://github.com/Puliphat" target="_blank" rel="noopener noreferrer">
                   <FaGithub />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.facebook.com/puli.putichai/" target="_blank" rel="noopener noreferrer">
                   <FaFacebook />
                 </a>
               </li>
               <li>
-                <a href="#">
+                <a href="https://www.linkedin.com/in/puliphat-puttichaivanichkij-21367622b/" target="_blank" rel="noopener noreferrer">
                   <FaLinkedinIn />
                 </a>
               </li>
             </ul>
           </div>
-          <Tilt scale={1.2} transitionSpeed={2500} tilltReverse={true}>
+          <Tilt scale={1.2} transitionSpeed={2500} tiltReverse={true}>
             <div>
-              <div className={styles.hero_img}></div>
+              <img src={profileImage} alt="Profile" className={styles.hero_img} />
             </div>
           </Tilt>
         </div>

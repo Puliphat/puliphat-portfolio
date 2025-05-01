@@ -5,13 +5,21 @@ nav {
     overflow: hidden;
 
     &  .logo{
-        font-size: 25px;
+        font-size: 24px;
         color: #fff;
+        font-weight: 600;
+        letter-spacing: 1px;
     }
 
     & a{
         color: #fff;
         text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+
+    & a:hover {
+        color: #a8c7ff;
     }
 
     .bars {
@@ -33,9 +41,9 @@ nav {
         align-items: center;
 
         & .logo{
-
             & a{
-                font-weight: bold;
+                font-weight: 600;
+                letter-spacing: 1px;
             }
         }
         
@@ -47,6 +55,8 @@ nav {
                 margin: 0 37px;
                 color: #fff;
                 margin-top: 3px;
+                font-size: 15px;
+                letter-spacing: 0.5px;
             }
         }
         
@@ -68,6 +78,7 @@ nav {
 
             & a{
                 color: rgb(0, 0, 0);
+                font-weight: 500;
             }
         }
     }
@@ -92,9 +103,12 @@ nav {
           & li {
             margin: 35px;
             color: #fff;
+            font-size: 16px;
+            letter-spacing: 0.5px;
 
             & a {
                 text-decoration: none;
+                font-weight: 500;
             }
           }
     }
@@ -119,6 +133,7 @@ nav {
 
         & a{
             color: rgb(0, 0, 0);
+            font-weight: 500;
         }
     }
 }
