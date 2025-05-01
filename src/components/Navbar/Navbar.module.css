@@ -1,0 +1,130 @@
+nav {
+    background-color: rgb(48, 81, 151);
+    position: relative;
+    top: 0;
+    overflow: hidden;
+
+    &  .logo{
+        font-size: 25px;
+        color: #fff;
+    }
+
+    & a{
+        color: #fff;
+        text-decoration: none;
+    }
+
+    .bars {
+        position: absolute;
+        top: 45px;
+        right: 20px;
+        color: #fff;
+    }
+
+    & .container{
+        max-width: 1170px;
+        margin: 0 auto;
+    }
+
+    & .nav_con {
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        & .logo{
+
+            & a{
+                font-weight: bold;
+            }
+        }
+        
+        & ul{
+            display: flex;
+            list-style: none;
+
+            & li{
+                margin: 0 37px;
+                color: #fff;
+                margin-top: 3px;
+            }
+        }
+        
+        & .button {
+            width: 100px;
+            height: 35px;
+            background-color: rgb(143, 183, 243);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 20px;
+            transition: 0.3s;
+            cursor: pointer;
+            
+            &:hover{
+                box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.7);
+                background-color: white;
+            }
+
+            & a{
+                color: rgb(0, 0, 0);
+            }
+        }
+    }
+}
+
+@media screen and (max-width:480px) {
+    .nav_con{
+        flex-direction: column;
+        height: auto !important;
+        margin: 50px 0;
+        align-items: start !important;
+        margin-left: 30px;
+
+        & ul , .button {
+            display: none !important;
+        }
+    }
+
+    .mobile_menu {
+          list-style: none;
+
+          & li {
+            margin: 35px;
+            color: #fff;
+
+            & a {
+                text-decoration: none;
+            }
+          }
+    }
+
+    & .mobile_button {
+        width: 100px;
+        height: 35px;
+        background-color: rgb(143, 183, 243);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+        transition: 0.3s;
+        cursor: pointer;
+        margin-left: 25px;
+        margin-bottom: 25px;
+
+        &:hover{
+            box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.7);
+            background-color: white;
+        }
+
+        & a{
+            color: rgb(0, 0, 0);
+        }
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .mobile_menu, .mobile_button, .bars {
+        display: none;
+    }
+}

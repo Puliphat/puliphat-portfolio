@@ -1,0 +1,53 @@
+.contact_con {
+    height: 400px;
+    background-color: rgb(48, 81, 151);
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+
+    & .contact_title {
+      font-size: 32px;
+      font-weight: bold;
+      padding-top: 60px;
+    }
+
+    & .contact_list {
+      margin-top: 70px;
+      display: flex;
+      justify-content: center;
+        
+      & .contact_items{
+        width: 250px;
+        margin: 0 50px;
+
+         & h3{
+          color: #fff;
+          font-weight: bold;
+          font-size: 22px;
+          margin-top: 20px;
+         }
+
+         & svg {
+          width: 75px;
+          height: 75px;
+         }
+      }
+    }
+  }
+
+
+  @media screen and (max-width: 480px) {
+    .contact_con{
+        height: auto;
+
+        & .contact_list{
+            flex-direction: column;
+            margin: 50px 0;
+            
+            & .contact_items{
+              width: 100%;
+              margin: 20px 0;
+            }
+        }
+    }
+}

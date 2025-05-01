@@ -1,0 +1,27 @@
+import React from "react";
+import styles from "./Contact.module.css";
+import { FaPhone, FaEnvelope, FaLine} from "react-icons/fa6";
+
+function Contact() {
+  return (
+      <div id="contact" className={styles.contact_con}>
+      <h2 className={styles.contact_title} >Contact Me</h2>
+        <div className={styles.contact_list}>
+            <div className={styles.contact_items}>
+              <FaPhone/>
+              <h3>091-705-5775</h3>
+            </div>
+            <div className={styles.contact_items}>
+              <FaEnvelope/> <br/>
+              <h3 className={styles.contact_email}>myty.2543@gmail.com</h3>
+            </div>
+            <div className={styles.contact_items}>
+              <FaLine/>
+              <h3>Line id: mity_35</h3>
+            </div>
+        </div>
+      </div>
+  );
+}
+
+export default Contact;
