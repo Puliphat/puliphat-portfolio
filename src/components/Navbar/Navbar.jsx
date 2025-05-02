@@ -11,7 +11,6 @@ const Navbar = () => {
     setToggle(!isToggled)
   }
 
-
   return (
     <nav>
       <div className={styles.container}>
@@ -41,12 +40,18 @@ const Navbar = () => {
         {isToggled ? (
           <>
           <ul className={styles.mobile_menu} >
-            <li><a href="#"></a>Skill</li>
-            <li><a href="#"></a>Project</li>
-            <li><a href="#"></a>Education</li>
+            <li>
+              <a href="#skills" >Skill</a>
+            </li>
+            <li>
+              <a href="#projects" >Projects</a>
+            </li>
+            <li>
+              <a href="#education" >Education</a>
+            </li>
           </ul>
           <div className={styles.mobile_button}>
-            <a href="#">Contact</a>
+            <a href="#contact" >Contact</a>
           </div>
           </>
         ) : null}

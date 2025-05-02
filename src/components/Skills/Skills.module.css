@@ -32,6 +32,10 @@
     .skills_con{
         height: auto;
 
+        & .skills_title {
+             margin-top: 70px;
+           }
+
         & .skills_list{
             flex-direction: column;
             margin: 50px 0;

@@ -31,7 +31,7 @@ function Hero() {
               functional websites, I am motivated and open to learning  <br />new skill to
               continually improve myself.
             </p>
-            <ul id="skills" className={styles.hero_social}>
+            <ul  className={styles.hero_social}>
               <li>
                 <a href="https://github.com/Puliphat" target="_blank" rel="noopener noreferrer">
                   <FaGithub />
