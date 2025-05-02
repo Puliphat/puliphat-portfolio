@@ -27,8 +27,8 @@ function Hero() {
               />
             </p>
             <p className={styles.text_4}>
-              A passionate WebDeveloper who loves creating beautiful <br />and
-              functional websites, I am motivated and open to learning  <br />new skill to
+              A passionate WebDeveloper who loves creating beautiful and
+              functional websites, I am motivated and open to learning new skill to
               continually improve myself.
             </p>
             <ul  className={styles.hero_social}>

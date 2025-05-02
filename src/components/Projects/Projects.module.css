@@ -33,6 +33,13 @@
                 color: inherit;
             }
 
+            .icon {
+                width: 37px;
+                height: 37px;
+                margin-left: 15px;
+                margin-top: 8px;
+            }
+
             & img {
                 width: 90%;
                 height: 200px;

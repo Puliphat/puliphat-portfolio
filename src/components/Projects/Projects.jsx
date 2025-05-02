@@ -1,10 +1,12 @@
 import React from "react";
 import styles from "./Projects.module.css";
 import Tilt from "react-parallax-tilt";
+import { FaGithub } from "react-icons/fa6";
 import movieProject from "../img/PHP_project.jpg";
 import detectProject from "../img/detect.jpg";
 import travelProject from "../img/search-travel.jpg";
 import shopProject from "../img/minishop.jpg";
+import pokeProject from "../img/poke.jpg";
 
 function Projects() {
   return (
@@ -14,6 +16,31 @@ function Projects() {
         Projects & Workshop{" "}
       </div>
       <div className={styles.projects_list}>
+      <div className={styles.projects_items}>
+          <a href="https://poke-deck-pearl.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={pokeProject} alt="Poke-Deck Project" />
+            </Tilt>
+          </a>
+          <div style={{display:"flex" ,justifyContent:"center"}} >
+            <h3>Pokémon Deck </h3>
+
+            <a href="https://github.com/Puliphat/poke-deck" target="_blank" rel="noopener noreferrer">
+              <FaGithub className={styles.icon}/></a> 
+
+            </div>
+          <p> This project is a web app for selecting and saving favorite Pokémon, built with React and Tailwind CSS. It utilizes React Hooks like useState and useEffect, and connects to PokeAPI as part of a workshop by Milerdev.</p>
+        </div>
+        <div className={styles.projects_items}>
+          <a href="https://github.com/Puliphat/search-travel" target="_blank" rel="noopener noreferrer">
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={travelProject} alt="Search Travel Project" />
+            </Tilt>
+          </a>
+          <h3>Search Travel</h3>
+          <p>A simple web application using Node.js to connect to a database and serve data via an API.
+          The frontend, built with React, displays the data using React Data Table Component.</p>
+        </div>
         <div className={styles.projects_items}>
           <a href="https://github.com/Puliphat/movie-project" target="_blank" rel="noopener noreferrer">
             <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
@@ -33,16 +60,6 @@ function Projects() {
           <h3>Detect Eye and Smile</h3>
           <p>This project is an AI-based facial detection system built with Python, Keras, TensorFlow, and OpenCV.
           It detects facial expressions such as smiles and identifies eye states open or closed</p>
-        </div>
-        <div className={styles.projects_items}>
-          <a href="https://github.com/Puliphat/search-travel" target="_blank" rel="noopener noreferrer">
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={travelProject} alt="Search Travel Project" />
-            </Tilt>
-          </a>
-          <h3>Search Travel</h3>
-          <p>A simple web application using Node.js to connect to a database and serve data via an API.
-          The frontend, built with React, displays the data using React Data Table Component.</p>
         </div>
         <div className={styles.projects_items}>
           <a href="https://github.com/Puliphat/minishop" target="_blank" rel="noopener noreferrer">
