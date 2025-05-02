@@ -21,7 +21,7 @@ function Projects() {
             </Tilt>
           </a>
           <h3>Streaming Movie</h3>
-          <p>This project is a movie streaming website developed with PHP for server-side logic, MySQL for database management, and jQuery for frontend interactivity.
+          <p>Movie streaming website developed with PHP for server-side logic, MySQL for database management, and jQuery for frontend interactivity.
           It includes a user authentication system that requires users to register and log in before streaming movies.</p>
         </div>
         <div className={styles.projects_items}>
