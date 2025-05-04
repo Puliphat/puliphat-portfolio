@@ -22,7 +22,7 @@ function Hero() {
                   "Full-Stack Developer •̀ ᗜ •́ )ᕗ",
                   1000,
                 ]}
-                speed={50}
+                speed={65}
                 repeat={Infinity}
               />
             </p>
