@@ -26,7 +26,7 @@ nav {
             bottom: -5px;
             left: 0;
             background-color: #93c5fd;
-            transition: width 2s ease;
+            transition: width 0.3s ease;
         }
 
         &:hover::after {
