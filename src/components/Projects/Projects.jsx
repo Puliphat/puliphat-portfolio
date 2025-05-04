@@ -26,20 +26,11 @@ function Projects() {
             <h3>Pokémon Deck </h3>
 
             <a href="https://github.com/Puliphat/poke-deck" target="_blank" rel="noopener noreferrer">
-              <FaGithub className={styles.icon}/></a> 
+              <FaGithub className={styles.icon} style={{ color: '#181717' }}/>
+            </a> 
 
             </div>
           <p> This project is a web app for selecting and saving favorite Pokémon, built with React and Tailwind CSS. It utilizes React Hooks like useState and useEffect, and connects to PokeAPI as part of a workshop by Milerdev.</p>
-        </div>
-        <div className={styles.projects_items}>
-          <a href="https://github.com/Puliphat/search-travel" target="_blank" rel="noopener noreferrer">
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={travelProject} alt="Search Travel Project" />
-            </Tilt>
-          </a>
-          <h3>Search Travel</h3>
-          <p>A simple web application using Node.js to connect to a database and serve data via an API.
-          The frontend, built with React, displays the data using React Data Table Component.</p>
         </div>
         <div className={styles.projects_items}>
           <a href="https://github.com/Puliphat/movie-project" target="_blank" rel="noopener noreferrer">
@@ -60,6 +51,15 @@ function Projects() {
           <h3>Detect Eye and Smile</h3>
           <p>This project is an AI-based facial detection system built with Python, Keras, TensorFlow, and OpenCV.
           It detects facial expressions such as smiles and identifies eye states open or closed</p>
+        </div>
+        <div className={styles.projects_items}>
+          <a href="https://github.com/Puliphat/search-travel" target="_blank" rel="noopener noreferrer">
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={travelProject} alt="Search Travel Project" />
+            </Tilt>
+          </a>
+          <h3>Search Travel</h3>
+          <p>A full-stack web application using Node.js to create RESTful API paths and connect to a database. The frontend is built with React and displays data using React Data Table Component.</p>
         </div>
         <div className={styles.projects_items}>
           <a href="https://github.com/Puliphat/minishop" target="_blank" rel="noopener noreferrer">

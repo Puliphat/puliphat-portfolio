@@ -14,7 +14,7 @@ function Hero() {
             <p className={styles.text_1}>Hi, my name is</p>
             <h3 className={styles.text_2}>Puliphat</h3>
             <p className={styles.text_3}>
-              <span style={{ marginRight: "5px" }}>I’m a </span>
+              <span style={{ marginRight: "5px" }}>I'm a </span>
               <TypeAnimation
                 sequence={[
                   "Web Developer ( ◡̀_◡́)ᕤ",
@@ -31,20 +31,20 @@ function Hero() {
               functional websites, I am motivated and open to learning new skill to
               continually improve myself.
             </p>
-            <ul  className={styles.hero_social}>
+            <ul className={styles.hero_social}>
               <li>
                 <a href="https://github.com/Puliphat" target="_blank" rel="noopener noreferrer">
-                  <FaGithub />
+                  <FaGithub style={{ color: '#181717' }}/>
                 </a>
               </li>
               <li>
                 <a href="https://www.facebook.com/puli.putichai/" target="_blank" rel="noopener noreferrer">
-                  <FaFacebook />
+                  <FaFacebook style={{ color: '#1877F2' }}/>
                 </a>
               </li>
               <li>
                 <a href="https://www.linkedin.com/in/puliphat-puttichaivanichkij-21367622b/" target="_blank" rel="noopener noreferrer">
-                  <FaLinkedinIn />
+                  <FaLinkedinIn style={{ color: '#0A66C2' }}/>
                 </a>
               </li>
             </ul>

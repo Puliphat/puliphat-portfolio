@@ -1,6 +1,6 @@
 .skills_con {
     height: 330px;
-    background-color: rgb(48, 81, 151);
+    background: linear-gradient(to right, #1e40af, #3b82f6);
     text-align: center;
     color: #fff;
     overflow: hidden;
@@ -19,10 +19,21 @@
 
         & li {
             margin: 0 30px;
+            transition: transform 0.3s ease;
+
+            &:hover {
+                transform: scale(1.2);
+            }
 
             & svg {
                 width: 80px;
                 height: 80px;
+                transition: all 0.3s ease;
+                filter: brightness(1.4) contrast(1.2);
+            }
+
+            &:hover svg {
+                filter: brightness(1.8) contrast(1.4) drop-shadow(0 0 15px rgba(147, 197, 253, 0.7));
             }
         }
     }

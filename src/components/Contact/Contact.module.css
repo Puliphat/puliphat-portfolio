@@ -1,6 +1,6 @@
 .contact_con {
     height: 400px;
-    background-color: rgb(48, 81, 151);
+    background: linear-gradient(to right, #1e40af, #3b82f6);
     color: #fff;
     text-align: center;
     overflow: hidden;
@@ -19,6 +19,9 @@
       & .contact_items{
         width: 250px;
         margin: 0 50px;
+        transition: transform 0.3s ease;
+
+
 
          & h3{
           color: #fff;
@@ -30,7 +33,9 @@
          & svg {
           width: 75px;
           height: 75px;
+          transition: all 0.3s ease;
          }
+
       }
     }
   }
