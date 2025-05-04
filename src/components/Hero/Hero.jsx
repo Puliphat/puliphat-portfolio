@@ -17,9 +17,9 @@ function Hero() {
               <span style={{ marginRight: "5px" }}>I'm a </span>
               <TypeAnimation
                 sequence={[
-                  "Web Developer ◡̀_◡́)ᕤ",
+                  "Web Developer  ◡̀_◡́)ᕤ",
                   1000,
-                  "Full-Stack Developer •̀ ᗜ •́ )ᕗ",
+                  "Full-Stack Developer ᕙ( •̀ ᗜ •́)ᕗ",
                   1000,
                 ]}
                 speed={65}
