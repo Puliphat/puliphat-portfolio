@@ -19,7 +19,7 @@ function Hero() {
                 sequence={[
                   "Web Developer  ◡̀_◡́)ᕤ",
                   1000,
-                  "Full-Stack Developer ᕙ( •̀ ᗜ •́)ᕗ",
+                  "Full-Stack Developer •̀ ᗜ •́)ᕗ",
                   1000,
                 ]}
                 speed={65}
