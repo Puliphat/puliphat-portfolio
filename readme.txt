@@ -1,1 +1,1 @@
-this is my portfolio !!
+This is my portfolio, which serves as a collection of my work, the technologies (stack) I use, and my contact information.

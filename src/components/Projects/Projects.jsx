@@ -7,6 +7,7 @@ import detectProject from "../img/detect.jpg";
 import travelProject from "../img/search-travel.jpg";
 import shopProject from "../img/minishop.jpg";
 import pokeProject from "../img/poke.jpg";
+import restfulProject from "../img/restful-api.jpg";
 
 function Projects() {
   return (
@@ -30,7 +31,7 @@ function Projects() {
             </a> 
 
             </div>
-          <p> This project is a web app for selecting and saving favorite Pokémon, built with React and Tailwind CSS. It utilizes React Hooks like useState and useEffect, and connects to PokeAPI as part of a workshop by Milerdev.</p>
+          <p> This project is a web app for selecting and saving favorite Pokémon, built with React and Tailwind CSS. It utilizes React Hooks like useState and useEffect, and connects to PokeAPI Credit to Milerdev for organizing this workshop.</p>
         </div>
         <div className={styles.projects_items}>
           <a href="https://github.com/Puliphat/movie-project" target="_blank" rel="noopener noreferrer">
@@ -53,13 +54,23 @@ function Projects() {
           It detects facial expressions such as smiles and identifies eye states open or closed</p>
         </div>
         <div className={styles.projects_items}>
+          <a href="https://github.com/Puliphat/restful-api" target="_blank" rel="noopener noreferrer">
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={restfulProject} alt="RESTful-API Project" />
+            </Tilt>
+          </a>
+          <h3>RESTful-API</h3>
+          <p> This workshop focuses on creating a RESTful API for the backend using CRUD operations for user form data.   build the API and test it with Postman before integrating it with the frontend. Credit to Mikelopster for organizing this workshop.</p>
+        </div>
+        <div className={styles.projects_items}>
           <a href="https://github.com/Puliphat/search-travel" target="_blank" rel="noopener noreferrer">
             <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
               <img src={travelProject} alt="Search Travel Project" />
             </Tilt>
           </a>
           <h3>Search Travel</h3>
-          <p>A full-stack web application using Node.js to create RESTful API paths and connect to a database. The frontend is built with React and displays data using React Data Table Component.</p>
+          <p>Full-stack web application using Node.js and MySQL to provide data retrieval API.
+          The frontend uses React and React Data Table Component to display and search data dynamically.</p>
         </div>
         <div className={styles.projects_items}>
           <a href="https://github.com/Puliphat/minishop" target="_blank" rel="noopener noreferrer">
