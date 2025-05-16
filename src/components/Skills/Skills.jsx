@@ -1,9 +1,11 @@
 import React from 'react'
 import styles from './Skills.module.css'
-import { FaJs,FaReact,FaGitAlt,FaNode,} from 'react-icons/fa6'
+import { FaJs,FaReact,FaGitAlt,FaNode,FaDocker} from 'react-icons/fa6'
 import { GrMysql } from "react-icons/gr";
 import { BiLogoTailwindCss } from "react-icons/bi";
 import { SiPostman } from "react-icons/si";
+import { DiRedis } from "react-icons/di";
+
 
 
 function Skills() {
@@ -21,17 +23,23 @@ function Skills() {
           <FaNode style={{ color: '#339933' }}/>
         </li>
         <li>
-          <GrMysql style={{ color: '#4479A1' }}/>
-        </li>
-        <li>
           <BiLogoTailwindCss style={{ color: '#06B6D4' }}/>
         </li> 
+        <li>
+          <GrMysql style={{ color: '#4479A1' }}/>
+        </li>
         <li>
           <FaGitAlt style={{ color: '#F05032' }}/>
         </li> 
         <li>
           <SiPostman style={{ color: '#FF6C37' }}/>
         </li>
+        <li>
+          <DiRedis style={{ color: '#C53030' }}/>
+        </li>
+        <li>
+          <FaDocker style={{ color: '#2496ED' }}/>
+        </li> 
       </ul>
     </div>
   )
