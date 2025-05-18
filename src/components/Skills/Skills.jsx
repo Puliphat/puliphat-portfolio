@@ -3,8 +3,7 @@ import styles from './Skills.module.css'
 import { FaJs,FaReact,FaGitAlt,FaNode,FaDocker} from 'react-icons/fa6'
 import { GrMysql } from "react-icons/gr";
 import { BiLogoTailwindCss } from "react-icons/bi";
-import { SiPostman } from "react-icons/si";
-import { DiRedis } from "react-icons/di";
+import { SiPostman,SiExpress  } from "react-icons/si";
 
 
 
@@ -29,13 +28,13 @@ function Skills() {
           <GrMysql style={{ color: '#4479A1' }}/>
         </li>
         <li>
+          <SiExpress style={{ color: '#000000' }}/>
+        </li>
+        <li>
           <FaGitAlt style={{ color: '#F05032' }}/>
         </li> 
         <li>
           <SiPostman style={{ color: '#FF6C37' }}/>
-        </li>
-        <li>
-          <DiRedis style={{ color: '#C53030' }}/>
         </li>
         <li>
           <FaDocker style={{ color: '#2496ED' }}/>
