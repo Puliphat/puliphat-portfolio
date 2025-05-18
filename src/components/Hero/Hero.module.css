@@ -14,7 +14,7 @@
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    margin-left: 30px;
+    margin-left: 20px;
 
     & .text_1 {
       font-size: 24px;

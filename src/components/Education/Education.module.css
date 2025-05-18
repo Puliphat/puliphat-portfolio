@@ -1,15 +1,30 @@
 .education_con{
-    height: 300px;
-    margin-bottom: 50px;
+    height: 400px;
     text-align: center;
     overflow: hidden;
+    text-align: center;
     /* background-color:rgb(0, 0, 0) ; */
 
     & .education_title{
-        color: #000000;
-        font-weight: bold;
-        margin-top: 20px;
-        font-size: 32px;
+      font-weight: bold;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 32px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+      position: relative;
+      display: inline-block;
+
+      &::after {
+          content: '';
+          position: absolute;
+          bottom: -10px;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 60px;
+          height: 3px;
+          background: #000000;
+          border-radius: 2px;
+      }
     }
  
     & .education_item{ 

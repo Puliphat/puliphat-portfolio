@@ -17,7 +17,7 @@ function Hero() {
               <span style={{ marginRight: "5px" }}>I'm a </span>
               <TypeAnimation
                 sequence={[
-                  "Web Developer  ◡̀_◡́)ᕤ",
+                  "Software Developer  ◡̀_◡́)ᕤ",
                   1000,
                   "Full-Stack Developer •̀ ᗜ •́)ᕗ",
                   1000,
@@ -27,9 +27,9 @@ function Hero() {
               />
             </p>
             <p className={styles.text_4}>
-              A passionate WebDeveloper who loves creating beautiful and
-              functional websites, I am motivated and open to learning new skill to
-              continually improve myself.
+            Full-Stack Developer who builds clean, modern, and meaningful web experiences.
+Simple code, solid results  always learning, always growing.
+I believe great things happen when good people build together.
             </p>
             <ul className={styles.hero_social}>
               <li>
