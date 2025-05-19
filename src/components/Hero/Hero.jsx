@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./Hero.module.css";
 import { FaGithub, FaLinkedinIn, FaFacebook } from "react-icons/fa6";
 import { TypeAnimation } from "react-type-animation";
@@ -6,8 +6,23 @@ import Tilt from "react-parallax-tilt";
 import profileImage from "../img/puliphat.jpg";
 
 function Hero() {
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const heroImg = document.querySelector(`.${styles.hero_img}`);
+      
+      if (heroImg) {
+        // Add subtle parallax effect on scroll
+        heroImg.style.transform = `translateY(${scrollPosition * 0.03}px)`;
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <div className={styles.hero_wrapper}>
+    <div className={styles.hero_wrapper} id="home">
       <div className={styles.container}>
         <div className={styles.hero_con}>
           <div className={styles.hero_info}>
@@ -17,39 +32,52 @@ function Hero() {
               <span style={{ marginRight: "5px" }}>I'm a </span>
               <TypeAnimation
                 sequence={[
-                  "Software Developer  ◡̀_◡́)ᕤ",
+                  "Web Developer (⌐■_■)",
                   1000,
                   "Full-Stack Developer •̀ ᗜ •́)ᕗ",
                   1000,
+                  "Software Developer  ◡̀_◡́)ᕤ",
+                  1000,
+
+                  
                 ]}
                 speed={65}
                 repeat={Infinity}
               />
             </p>
             <p className={styles.text_4}>
-            Full-Stack Developer who builds clean, modern, and meaningful web experiences.
-Simple code, solid results  always learning, always growing.
-I believe great things happen when good people build together.
+              Full-Stack Developer who builds clean, modern, and meaningful web experiences.
+              Simple code, solid results  always learning, always growing.
+              I believe great things happen when good people build together.
             </p>
             <ul className={styles.hero_social}>
               <li>
-                <a href="https://github.com/Puliphat" target="_blank" rel="noopener noreferrer">
+                <a href="https://github.com/Puliphat" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
                   <FaGithub style={{ color: '#181717' }}/>
                 </a>
               </li>
               <li>
-                <a href="https://www.facebook.com/puli.putichai/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.facebook.com/puli.putichai/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                   <FaFacebook style={{ color: '#1877F2' }}/>
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/puliphat-puttichaivanichkij-21367622b/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/in/puliphat-puttichaivanichkij-21367622b/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                   <FaLinkedinIn style={{ color: '#0A66C2' }}/>
                 </a>
               </li>
             </ul>
           </div>
-          <Tilt scale={1.2} transitionSpeed={2500} tiltReverse={true}>
+          <Tilt 
+            scale={1.05}
+            transitionSpeed={2500}
+            tiltReverse={true}
+            tiltMaxAngleX={10} 
+            tiltMaxAngleY={10}
+            glareEnable={true}
+            glareMaxOpacity={0.2}
+            glareBorderRadius="12px"
+          >
             <div>
               <img src={profileImage} alt="Profile" className={styles.hero_img} />
             </div>

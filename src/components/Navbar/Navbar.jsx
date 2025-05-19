@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import styles from "./Navbar.module.css"
 import { BiSolidCat } from "react-icons/bi"
 import { FaBars } from "react-icons/fa6"
@@ -6,22 +6,37 @@ import { FaBars } from "react-icons/fa6"
 const Navbar = () => {
   
   const [isToggled, setToggle] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  
+  // Detect scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 20) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   function handleToggle() {
     setToggle(!isToggled)
   }
 
   return (
-    <nav>
+    <nav className={scrolled ? styles.scrolled : ''}>
       <div className={styles.container}>
         <div className={styles.nav_con}>
           <div className={styles.logo}>
-            <span href="#"><BiSolidCat/> MIGHTY </span>
+            <span href="#"><BiSolidCat/> PULIPHAT </span>
           </div>
 
           <ul>
             <li>
-              <a href="#skills">Skill</a>
+              <a href="#skills">Skills</a>
             </li>
             <li>
               <a href="#projects">Projects</a>
@@ -41,7 +56,7 @@ const Navbar = () => {
           <>
           <ul className={styles.mobile_menu} >
             <li>
-              <a href="#skills" >Skill</a>
+              <a href="#skills" >Skills</a>
             </li>
             <li>
               <a href="#projects" >Projects</a>

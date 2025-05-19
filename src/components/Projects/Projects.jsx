@@ -8,15 +8,21 @@ import travelProject from "../img/search-travel.jpg";
 import shopProject from "../img/minishop.jpg";
 import pokeProject from "../img/poke.jpg";
 import restfulProject from "../img/restful-api.jpg";
+import useInView from '../../hooks/useInView';
 
 function Projects() {
+  const [projectsRef, isProjectsInView] = useInView({ threshold: 0.1 });
+  
   return (
     <div className={styles.projects_con}>
       <div id="projects" className={styles.projects_title}>
         {" "}
         Projects & Workshop{" "}
       </div>
-      <div className={styles.projects_list}>
+      <div 
+        ref={projectsRef}
+        className={`${styles.projects_list} ${isProjectsInView ? styles.animate : ''}`}
+      >
         <div className={styles.projects_items}>
           <a
             href="https://poke-deck-pearl.vercel.app/"

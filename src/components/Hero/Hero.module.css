@@ -1,13 +1,16 @@
 .hero_wrapper {
-  height: 560px;
+  height: 600px;
   overflow: hidden;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  
 
   & .container {
     max-width: 1170px;
     margin: 0 auto;
     padding: 0 20px;
+    position: relative;
+    z-index: 2;
   }
 
   & .hero_con {
@@ -16,19 +19,41 @@
     margin-top: 100px;
     margin-left: 20px;
 
+    & .hero_info {
+      animation: fadeInUp 0.8s ease;
+    }
+
     & .text_1 {
       font-size: 24px;
       color: #2c3e50;
-      margin-bottom: 10px;
+      margin-bottom: 12px;
       opacity: 0.9;
+      position: relative;
+      display: inline-block;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 40px;
+        height: 3px;
+        background-color: #3b82f6;
+        border-radius: 2px;
+      }
     }
 
     & .text_2 {
-      font-size: 62px;
+      font-size: 70px;
       font-weight: 700;
-      color:  #3b82f6;
+      color: #3b82f6;
       margin-bottom: 15px;
-      line-height: 1.2;
+      line-height: 1.1;
+      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
     & .text_3 {
@@ -40,58 +65,98 @@
 
     & .text_4 {
       font-size: 16px;
-      color: #666;
-      line-height: 1.6;
+      color: #4b5563;
+      line-height: 1.8;
       margin-bottom: 30px;
-      max-width: 500px;
+      max-width: 520px;
+      border-left: 3px solid #3b82f6;
+      padding-left: 16px;
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 15px;
+      border-radius: 0 8px 8px 0;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
     }
 
     & .hero_social {
       display: flex;
       list-style: none;
       margin-top: 30px;
-      gap: 20px;
+      gap: 22px;
 
       & li {
         transition: transform 0.3s ease;
 
         &:hover {
-          transform: translateY(-5px);
+          transform: translateY(-8px);
         }
 
         & a {
-          display: block;
-          transition: transform 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 48px;
+          height: 48px;
+          background-color: #fff;
+          border-radius: 50%;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+          transition: all 0.3s ease;
 
           &:hover {
-            transform: scale(1.1);
+            box-shadow: 0 6px 15px rgba(59, 130, 246, 0.2);
+            transform: scale(1.05);
           }
         }
 
         & svg {
-          width: 40px;
-          height: 40px;
-          transition: filter 0.3s ease;
+          width: 24px;
+          height: 24px;
+          transition: all 0.3s ease;
         }
       }
     }
 
     & .hero_img {
-      width: 300px;
-      height: 300px;
-      border-radius: 100%;
+      width: 320px;
+      height: 320px;
+      border-radius: 12px;
       background-image: url("..\img\puliphat.jpg");
       background-size: cover;
       margin-top: 30px;
       margin-right: 120px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      border-radius: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+      transition: all 0.5s ease;
+      position: relative;
+      overflow: hidden;
+      
+      &::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        border: 3px solid #3b82f6;
+        border-radius: 12px;
+        opacity: 0.3;
+      }
     }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
 @media screen and (max-width: 480px) {
      .hero_wrapper {
         height: auto;
+        margin-top: 80px;
+        text-align: center;
         
         & .hero_con {
           flex-direction: column;
@@ -102,11 +167,21 @@
             width: 99%;
           }
 
+          & .text_2 {
+            font-size: 52px;
+          }
+
           & .text_3 {
             font-size: 26px;
             height: 50px;
             display: flex;
             align-items: center;
+          }
+          
+          & .hero_img {
+            margin: 20px auto;
+            width: 250px;
+            height: 250px;
           }
         }
      }

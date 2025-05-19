@@ -1,12 +1,18 @@
 import React from "react";
 import styles from "./Contact.module.css";
 import { FaPhone, FaEnvelope, FaLine} from "react-icons/fa6";
+import useInView from '../../hooks/useInView';
 
 function Contact() {
+  const [contactRef, isContactInView] = useInView({ threshold: 0.1 });
+
   return (
       <div id="contact" className={styles.contact_con}>
       <h2 className={styles.contact_title} >Contact Me</h2>
-        <div className={styles.contact_list}>
+        <div 
+          ref={contactRef}
+          className={`${styles.contact_list} ${isContactInView ? styles.animate : ''}`}
+        >
             <div className={styles.contact_items}>
               <FaPhone/>
               <h3>091-705-5775</h3>

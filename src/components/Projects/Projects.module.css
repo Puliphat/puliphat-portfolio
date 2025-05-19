@@ -1,4 +1,4 @@
-.projects_con {
+ .projects_con {
     max-width: 1170px;
     height: auto;
     margin: 0 auto;
@@ -19,13 +19,14 @@
         &::after {
             content: '';
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background: #000000;
+            width: 80px;
+            height: 4px;
+            background: #3b82f6;
             border-radius: 2px;
+            box-shadow: 0 2px 5px rgba(59, 130, 246, 0.3);
         }
     }
 
@@ -34,12 +35,52 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 40px;
         justify-items: center;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        
+        &.animate {
+            opacity: 1;
+            transform: translateY(0);
+        }
         
         & .projects_items {
             margin-top: 20px;
             width: 100%;
             max-width: 350px;
             text-align: center;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+
+            .projects_list.animate &:nth-child(1) {
+                transition-delay: 0.1s;
+            }
+
+            .projects_list.animate &:nth-child(2) {
+                transition-delay: 0.2s;
+            }
+
+            .projects_list.animate &:nth-child(3) {
+                transition-delay: 0.3s;
+            }
+
+            .projects_list.animate &:nth-child(4) {
+                transition-delay: 0.4s;
+            }
+
+            .projects_list.animate &:nth-child(5) {
+                transition-delay: 0.5s;
+            }
+
+            .projects_list.animate &:nth-child(6) {
+                transition-delay: 0.6s;
+            }
+
+            .projects_list.animate & {
+                opacity: 1;
+                transform: translateY(0);
+            }
 
             & a {
                 display: block;
@@ -91,9 +132,11 @@
                 margin: 10px 0;
                 padding: 0 10px;
             }
+
         }
     }
 }
+
 
 @media screen and (max-width: 768px) {
     .projects_con {

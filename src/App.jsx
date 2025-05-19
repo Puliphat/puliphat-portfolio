@@ -7,19 +7,26 @@ import Education from './components/Education/Education'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 
-
-
 function App() {
-
   return (
     <>
-    <Navbar/>
-    <Hero/>
-    <Skills/>
-    <Projects/>
-    <Education/>
-    <Contact/>
-    <Footer/>
+      <Navbar/>
+      <section id="home">
+        <Hero/>
+      </section>
+      <section id="skills">
+        <Skills/>
+      </section>
+      <section id="projects">
+        <Projects/>
+      </section>
+      <section id="education">
+        <Education/>
+      </section>
+      <section id="contact">
+        <Contact/>
+      </section>
+      <Footer/>
     </>
   )
 }
