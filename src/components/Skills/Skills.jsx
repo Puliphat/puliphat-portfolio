@@ -11,17 +11,17 @@ const frontendSkills = [
   { name: "HTML", icon: <FaHtml5 style={{ color: '#E34F26' }} />, level: 100 },
   { name: "CSS", icon: <FaCss3Alt style={{ color: '#4a90e2' }} />, level: 100 },
   { name: "JavaScript", icon: <FaJs style={{ color: '#F7DF1E' }} />, level: 100 },
-  { name: "React.js", icon: <FaReact style={{ color: '#61DAFB' }} />, level: 90 },
-  { name: "TailwindCSS", icon: <BiLogoTailwindCss style={{ color: '#06B6D4' }} />, level: 80 }
+  { name: "React.js", icon: <FaReact style={{ color: '#61DAFB' }} />, level: 100 },
+  { name: "TailwindCSS", icon: <BiLogoTailwindCss style={{ color: '#06B6D4' }} />, level: 85 }
 ];
 
 const backendSkills = [
-  { name: "Node.js", icon: <FaNode style={{ color: '#339933' }} />, level: 90 },
-  { name: "Express.js", icon: <SiExpress style={{ color: '#000000' }} />, level: 90 },
+  { name: "Node.js", icon: <FaNode style={{ color: '#339933' }} />, level: 100 },
+  { name: "Express.js", icon: <SiExpress style={{ color: '#000000' }} />, level: 100 },
   { name: "MySQL", icon: <GrMysql style={{ color: '#000000' }} />, level: 90 },
-  { name: "Git", icon: <FaGitAlt style={{ color: '#F05032' }} />, level: 90 },
+  { name: "Git", icon: <FaGitAlt style={{ color: '#F05032' }} />, level: 85 },
   { name: "Postman", icon: <SiPostman style={{ color: '#FF6C37' }} />, level: 100 },
-  { name: "Docker", icon: <FaDocker style={{ color: '#2496ED' }} />, level: 70 }
+  { name: "Docker", icon: <FaDocker style={{ color: '#2496ED' }} />, level: 85 }
 ];
 
 function Skills() {
