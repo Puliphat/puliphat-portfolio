@@ -1,24 +1,12 @@
 .footer {
-    padding: 10px 10px;
     border-top: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.03);
     position: relative;
     overflow: hidden;
+    background-color: #fff;
+    padding: 3px 3px;
 }
 
-.footer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        radial-gradient(circle at 25% 25%, rgba(59, 130, 246, 0.03) 2%, transparent 12%),
-        radial-gradient(circle at 75% 75%, rgba(59, 130, 246, 0.03) 2%, transparent 12%);
-    background-size: 60px 60px;
-    z-index: 1;
-}
 
 .footer_content {
     max-width: 1170px;
@@ -27,7 +15,7 @@
     flex-direction: column;
     align-items: center;
     position: relative;
-    z-index: 2;
+    text-decoration: underline;
 }
 
 
@@ -53,11 +41,7 @@
     animation: pulse 1.5s infinite;
 }
 
-.footer_tagline {
-    font-size: 14px;
-    color: #6b7280;
-    margin-top: 5px;
-}
+
 
 @keyframes pulse {
     0% {
@@ -73,7 +57,7 @@
 
 @media screen and (max-width: 768px) {
     .footer {
-        padding: 25px 15px;
+        padding: 10px 10px;
     }
     
     .footer_social {

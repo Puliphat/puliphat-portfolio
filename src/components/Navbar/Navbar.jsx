@@ -31,7 +31,7 @@ const Navbar = () => {
       <div className={styles.container}>
         <div className={styles.nav_con}>
           <div className={styles.logo}>
-            <span href="#"><BiSolidCat/> PULIPHAT </span>
+            <a href="#"><BiSolidCat/> PULIPHAT </a>
           </div>
 
           <ul>

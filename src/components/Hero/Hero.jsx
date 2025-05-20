@@ -32,12 +32,10 @@ function Hero() {
               <span style={{ marginRight: "5px" }}>I'm a </span>
               <TypeAnimation
                 sequence={[
-                  "Web Developer (⌐■_■)",
-                  1000,
                   "Full-Stack Developer •̀ ᗜ •́)ᕗ",
-                  1000,
-                  "Software Developer  ◡̀_◡́)ᕤ",
-                  1000,
+                  1500,
+                  "Front-End Developer  ◡̀_◡́)ᕤ",
+                  1500,
 
                   
                 ]}
@@ -46,9 +44,8 @@ function Hero() {
               />
             </p>
             <p className={styles.text_4}>
-              Full-Stack Developer who builds clean, modern, and meaningful web experiences.
-              Simple code, solid results  always learning, always growing.
-              I believe great things happen when good people build together.
+            I enjoy crafting clean, modern websites that create real value. Always curious, always 
+            improving, I believe we grow a little every day by learning and building with purpose.
             </p>
             <ul className={styles.hero_social}>
               <li>

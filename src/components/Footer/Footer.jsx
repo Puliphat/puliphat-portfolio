@@ -13,9 +13,6 @@ function Footer() {
             <p>
               Developed with <FaHeart className={styles.heart_icon} /> by Puliphat © {currentYear}
             </p>
-            <p className={styles.footer_tagline}>
-              Creating outstanding web experiences
-            </p>
           </div>
         </div>
     </footer>
