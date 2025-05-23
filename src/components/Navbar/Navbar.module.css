@@ -5,7 +5,7 @@ nav {
     overflow: hidden;
     height: auto;
     padding-top: 2px;
-    padding-bottom: 7px;
+    padding-bottom: 9px;
     width: 100%;
     z-index: 1000;
     transition: all 0.3s ease;
@@ -14,7 +14,7 @@ nav {
         background: rgba(30, 64, 175, 0.95);
         backdrop-filter: blur(10px);
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-        padding: 0px 0;
+        padding-bottom: 4px;
     }
 
     &  .logo{
@@ -30,6 +30,8 @@ nav {
         font-weight: 500;
         transition: all 0.2s ease;
         position: relative;
+        
+
 
         &::after {
             content: '';
@@ -38,8 +40,9 @@ nav {
             height: 2px;
             bottom: -5px;
             left: 0;
-            background-color: #93c5fd;
+            background: linear-gradient(90deg, #ffffff 0%, #2177d8 100%);
             transition: width 0.3s ease;
+            filter: brightness(1.2)
         }
 
         &:hover::after {
@@ -53,7 +56,7 @@ nav {
 
     .bars {
         position: absolute;
-        top: 35px;
+        top: 25px;
         right: 40px;
         color: #fff;
         font-size: 24px;
@@ -93,8 +96,8 @@ nav {
         
         & .button {
             width: 100px;
-            height: 35px;
-            background-color: #fff;
+            height: 40px;
+            background-color: rgba(255, 255, 255);
             display: flex;
             justify-content: center;
             align-items: center;
@@ -102,21 +105,26 @@ nav {
             transition: all 0.3s ease;
             cursor: pointer;
             position: relative;
-            border: 2px solid #000;
+            border: 2px solid #313335;
 
-            &:hover {
-                box-shadow: 0 0 0 4px rgba(0, 0, 0, 0.2);
+            & a { 
+                color: #000000;
             }
 
+            &:hover {
+                background-color: rgba(127, 183, 236, 0.589);
+                box-shadow: 0 0 10px rgba(147, 197, 253, 0.5);
+           
             & a{
-                color: #000;
-                font-size: 18px;
-                font-weight: 500;
+                color: #ffffff;
+                font-size: 17px;
                 text-decoration: none;
 
                 &::after {
                     display: none;
                 }
+            }
+
             }
         }
     }
@@ -126,7 +134,7 @@ nav {
     .nav_con{
         flex-direction: column;
         height: auto !important;
-        margin: 25px 0;
+        margin: 15px 0;
         align-items: start !important;
         margin-left: 30px;
 
@@ -174,7 +182,7 @@ nav {
     & .mobile_button {
         width: 100px;
         height: 35px;
-        background-color: rgb(143, 183, 243);
+        background-color: rgba(255, 255, 255);
         display: flex;
         justify-content: center;
         align-items: center;
@@ -184,21 +192,24 @@ nav {
         margin-left: 25px;
         margin-bottom: 15px;
 
-        &:hover{
-            box-shadow: 0 0 30px 0px rgba(0, 0, 0, 0.7);
-            background-color: white;
+        & a { 
+            color: #000000;
         }
 
+        &:hover {
+            background-color: rgba(127, 183, 236, 0.589);
+            box-shadow: 0 0 10px rgba(147, 197, 253, 0.5);
+       
         & a{
-            color: #fff;
-            font-weight: 500;
-            transition: color 0.3s ease;
+            color: #ffffff;
+            font-size: 17px;
             text-decoration: none;
-        }
 
-        &:hover a {
-            color: #000;
+            &::after {
+                display: none;
+            }
         }
+    }
     }
 }
 

@@ -1,5 +1,5 @@
 .hero_wrapper {
-  height: 600px;
+  height: 700px;
   overflow: hidden;
   position: relative;
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
@@ -16,7 +16,7 @@
   & .hero_con {
     display: flex;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 120px;
     margin-left: 20px;
 
     & .hero_info {
@@ -25,56 +25,66 @@
 
     & .text_1 {
       font-size: 24px;
-      color: #2c3e50;
       margin-bottom: 12px;
       opacity: 0.9;
       position: relative;
       display: inline-block;
-      
-      &::after {
-        content: "";
-        position: absolute;
-        bottom: -5px;
-        left: 0;
-        width: 40px;
-        height: 3px;
-        background-color: #3b82f6;
-        border-radius: 2px;
-      }
-    }
-
-    & .text_2 {
-      font-size: 70px;
-      font-weight: 700;
-      color: #3b82f6;
-      margin-bottom: 15px;
-      line-height: 1.1;
-      text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-      background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+      background: linear-gradient(90deg, #1f1e1e 0%, #0077ff 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
+      font-weight: 500;
+      letter-spacing: 1px;
+
+    }
+
+    & .text_2 {
+      font-size: 80px;
+      font-weight: 700;
+      margin-bottom: 15px;
+      line-height: 1.1;
+      text-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+      background: linear-gradient(135deg, #3b82f6 0%, #618ae4 60%, #1473e0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      letter-spacing: -1px;
+      position: relative;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        width: 120%;
+        height: 10px;
+        background: linear-gradient(90deg, rgba(59, 130, 246, 0.3) 0%, rgba(147, 197, 253, 0) 100%);
+        bottom: 5px;
+        left: -10px;
+        filter: blur(10px);
+        z-index: -1;
+      }
     }
 
     & .text_3 {
-      color: #2c3e50;
-      font-size: 32px;
-      margin-bottom: 20px;
+      font-size: 36px;
+      margin-bottom: 25px;
       font-weight: 500;
+      background: linear-gradient(90deg, #252424 0%, #0077ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      height: 60px;
+      display: flex;
+      align-items: center;
     }
 
     & .text_4 {
-      font-size: 16px;
-      color: #4b5563;
+      font-size: 17px;
       line-height: 1.8;
       margin-bottom: 30px;
       max-width: 520px;
       border-left: 3px solid #3b82f6;
-      padding-left: 16px;
-      background-color: rgba(255, 255, 255, 0.5);
-      padding: 15px;
+      padding: 15px 20px;
       border-radius: 0 8px 8px 0;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
     }
 
     & .hero_social {
@@ -94,16 +104,19 @@
           display: flex;
           align-items: center;
           justify-content: center;
-          width: 48px;
-          height: 48px;
+          width: 52px;
+          height: 52px;
           background-color: #fff;
           border-radius: 50%;
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+          box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
           transition: all 0.3s ease;
+          border: 2px solid transparent;
 
           &:hover {
-            box-shadow: 0 6px 15px rgba(59, 130, 246, 0.2);
+            box-shadow: 0 8px 20px rgba(59, 130, 246, 0.25);
             transform: scale(1.05);
+            border-color: rgba(147, 197, 253, 0.5);
+            background-color: rgba(59, 131, 246, 0.705);
           }
         }
 
@@ -111,9 +124,11 @@
           width: 24px;
           height: 24px;
           transition: all 0.3s ease;
+          color: rgb(7, 80, 177);
         }
       }
     }
+
 
     & .hero_img {
       width: 320px;
@@ -121,7 +136,7 @@
       border-radius: 12px;
       background-image: url("..\img\puliphat.jpg");
       background-size: cover;
-      margin-top: 30px;
+      margin-top: 40px;
       margin-right: 120px;
       border-radius: 100%;
       box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
@@ -155,7 +170,7 @@
 @media screen and (max-width: 480px) {
      .hero_wrapper {
         height: auto;
-        margin-top: 80px;
+        margin-top: 70px;
         text-align: center;
         
         & .hero_con {
@@ -164,7 +179,7 @@
           padding: 20px;
           
           & .hero_info, .hero_img{
-            width: 99%;
+            width: 100%;
           }
 
           & .text_2 {
@@ -173,13 +188,17 @@
 
           & .text_3 {
             font-size: 26px;
-            height: 50px;
+            height: 70px;
             display: flex;
             align-items: center;
           }
           
+          & .hero_social {
+            justify-content: center;
+          }
+
           & .hero_img {
-            margin: 20px auto;
+            margin: 35px auto;
             width: 250px;
             height: 250px;
           }

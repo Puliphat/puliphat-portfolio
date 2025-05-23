@@ -1,36 +1,37 @@
 .contact_con {
     min-height: 450px;
-    background: linear-gradient(135deg, #1e3a8a, #3b82f6, #60a5fa);
+    background: linear-gradient(135deg, #1e3a8a, #3b82f6);
     color: #fff;
     text-align: center;
     overflow: hidden;
-    padding: 60px 20px;
+    padding: 70px 20px;
     position: relative;
     padding-bottom: 100px;
 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-image: radial-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+        background-size: 20px 20px;
+        opacity: 0.3;
+        z-index: 1;
+    }
 
     & .contact_title {
-        font-weight: 700;
-        margin-bottom: 50px;
-        font-size: 36px;
-        text-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+        font-weight: 800;
+        margin-bottom: 60px;
+        font-size: 40px;
         position: relative;
         display: inline-block;
         z-index: 2;
-
-        &::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: #fff;
-            border-radius: 2px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        }
+        letter-spacing: 1px;
+        text-transform: uppercase;
     }
+
 
     & .contact_list {
         margin-top: 50px;
@@ -49,74 +50,151 @@
         }
         
         & .contact_items {
-            width: 300px;
-            padding: 30px 20px;
-            background-color: rgba(255, 255, 255, 0.1);
+            width: 280px;
+            padding: 40px 25px;
+            background-color: rgba(255, 255, 255, 0.08);
             border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
             backdrop-filter: blur(5px);
-            transition: all 0.4s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 1px solid rgba(255, 255, 255, 0.1);
             opacity: 0;
             transform: translateY(20px);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+            
+            &::before {
+                content: "";
+                position: absolute;
+                inset: 0;
+                background: linear-gradient(225deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+                z-index: -1;
+                transition: opacity 0.4s ease;
+                opacity: 0;
+            }
             
             .contact_list.animate &:nth-child(1) {
-                transition: opacity 0.6s ease, transform 0.6s ease;
+                transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 transition-delay: 0.1s;
                 opacity: 1;
                 transform: translateY(0);
             }
             
             .contact_list.animate &:nth-child(2) {
-                transition: opacity 0.6s ease, transform 0.6s ease;
+                transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 transition-delay: 0.3s;
                 opacity: 1;
                 transform: translateY(0);
             }
             
             .contact_list.animate &:nth-child(3) {
-                transition: opacity 0.6s ease, transform 0.6s ease;
+                transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
                 transition-delay: 0.5s;
                 opacity: 1;
                 transform: translateY(0);
             }
             
             &:hover {
-                transform: translateY(-10px);
+                transform: translateY(-10px) scale(1.03);
                 background-color: rgba(255, 255, 255, 0.15);
                 box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+                border-color: rgba(255, 255, 255, 0.2);
+                
+                &::before {
+                    opacity: 1;
+                }
             }
 
             & h3 {
                 color: #fff;
                 font-weight: 600;
-                font-size: 20px;
-                margin-top: 20px;
+                font-size: 18px;
+                margin-top: 15px;
                 word-break: break-word;
+                position: relative;
+                display: inline-block;
+                padding-bottom: 10px;
+                
+                &::after {
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    transform: translateX(-50%);
+                    width: 30px;
+                    height: 2px;
+                    background: rgba(255, 255, 255, 0.3);
+                    border-radius: 2px;
+                    transition: all 0.3s ease;
+                }
+            }
+            
+            &:hover h3::after {
+                width: 50px;
+                background: rgba(255, 255, 255, 0.5);
+            }
+
+            & .contact_icon {
+                display: flex;
+                justify-content: center;
+                margin-bottom: 15px;
+                position: relative;
+                width: 80px;
+                height: 80px;
+                margin: 0 auto 20px;
+                background: rgba(255, 255, 255, 0.1);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                transition: all 0.4s ease;
+                
+                &::after {
+                    content: "";
+                    position: absolute;
+                    inset: -5px;
+                    border-radius: 50%;
+                    border: 2px solid rgba(255, 255, 255, 0.2);
+                    opacity: 0;
+                    transition: all 0.4s ease;
+                }
+            }
+            
+            &:hover .contact_icon {
+                background: rgba(255, 255, 255, 0.2);
+                transform: scale(1.1);
+                
+                &::after {
+                    opacity: 1;
+                    inset: -8px;
+                }
             }
 
             & svg {
-                width: 60px;
-                height: 60px;
-                filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.2));
-                transition: all 0.3s ease;
+                width: 40px;
+                height: 40px;
+                filter: drop-shadow(0 2px 5px rgba(0, 0, 0, 0.3));
+                transition: all 0.4s ease;
+                color: rgba(255, 255, 255, 0.9);
             }
             
             &:hover svg {
-                transform: scale(1.15);
-                filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.3));
+                transform: scale(1.1);
+                color: #ffffff;
+                filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.4));
             }
         }
     }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 991px) {
     .contact_con {
-        padding: 40px 20px;
+        padding: 60px 20px;
         
         & .contact_title {
-            font-size: 32px;
-            margin-bottom: 40px;
+            font-size: 36px;
+            margin-bottom: 50px;
         }
         
         & .contact_list {
@@ -126,6 +204,17 @@
             & .contact_items {
                 width: 45%;
                 min-width: 250px;
+                padding: 35px 20px;
+                
+                & .contact_icon {
+                    width: 70px;
+                    height: 70px;
+                    
+                    & svg {
+                        width: 35px;
+                        height: 35px;
+                    }
+                }
             }
         }
     }
@@ -133,7 +222,11 @@
 
 @media screen and (max-width: 480px) {
     .contact_con {
-        padding: 40px 15px;
+        padding: 50px 15px;
+        
+        & .contact_title {
+            font-size: 30px;
+        }
 
         & .contact_list {
             flex-direction: column;
@@ -141,16 +234,32 @@
             
             & .contact_items {
                 width: 100%;
-                max-width: 300px;
-                margin: 15px auto;
+                max-width: 280px;
+                margin: 10px auto;
+                padding: 30px 20px;
                 
-                & svg {
-                    width: 50px;
-                    height: 50px;
+                & .contact_icon {
+                    width: 60px;
+                    height: 60px;
+                    
+                    & svg {
+                        width: 30px;
+                        height: 30px;
+                    }
                 }
                 
                 & h3 {
-                    font-size: 18px;
+                    font-size: 16px;
+                    padding-bottom: 8px;
+                    margin-top: 12px;
+                    
+                    &::after {
+                        width: 25px;
+                    }
+                }
+                
+                &:hover h3::after {
+                    width: 40px;
                 }
             }
         }

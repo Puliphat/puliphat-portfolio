@@ -9,6 +9,7 @@ import shopProject from "../img/minishop.jpg";
 import pokeProject from "../img/poke.jpg";
 import restfulProject from "../img/restful-api.jpg";
 import pokeProject2 from "../img/poke-next.jpg";
+import portfolioV2 from "../img/port_v2.jpg";
 import useInView from '../../hooks/useInView';
 
 function Projects() {
@@ -24,7 +25,65 @@ function Projects() {
         ref={projectsRef}
         className={`${styles.projects_list} ${isProjectsInView ? styles.animate : ''}`}
       >
-         <div className={styles.projects_items}>
+       
+        <div className={styles.projects_items}>
+          <a
+            href="https://github.com/Puliphat/movie-project"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={movieProject} alt="Streaming Movie Project" />
+            </Tilt>
+          </a>
+          <h3>Streaming Movie</h3>
+          <p>
+            Movie streaming website developed with PHP for server-side logic,
+            MySQL for database management, and jQuery for frontend
+            interactivity. It includes a user authentication system that
+            requires users to register and log in before streaming movies.
+          </p>
+        </div>
+
+        <div className={styles.projects_items}>
+          <a
+            href="https://portfolio-v2-gamma-beige.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={portfolioV2} alt="Portfolio_V2 Project" />
+            </Tilt>
+          </a>
+          <h3>Portfolio_V2</h3>
+          <p>
+          React-based portfolio with Parallax scroll effects for dynamic, layered movement.
+Page/offset/factor is fine-tuned across key sections for better structure.
+Parallax is limited on mobile, but CSS responsive design is applied.
+
+
+          </p>
+        </div>
+
+        <div className={styles.projects_items}>
+          <a
+            href="https://github.com/Puliphat/detect-eye-and-smile"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={detectProject} alt="Eye and Smile Detection Project" />
+            </Tilt>
+          </a>
+          <h3>Detect Eye and Smile</h3>
+          <p>
+            This project is an AI-based facial detection system built with
+            Python, Keras, TensorFlow, and OpenCV. It detects facial expressions
+            such as smiles and identifies eye states open or closed
+          </p>
+        </div>
+
+        <div className={styles.projects_items}>
           <a
             href="https://pokemon-next-js-nu.vercel.app/"
             target="_blank"
@@ -46,46 +105,14 @@ function Projects() {
             </a>
           </div>
           <p>
-           Built a responsive Pokédex web app using Next.js and Tailwind CSS, with dynamic Pokémon data from PokeAPI. Leveraged React hooks and Next.js components like useState, useEffect, Link, and Image, with error handling and SEO support via SSR.
-            
+           Built a responsive Pokédex web app using Next.js and Tailwind CSS, with dynamic Pokémon data from PokeAPI. Leveraged React hooks and Next.js components like useState, useEffect, 
+           Link, and Image, with error handling and SEO support via SSR.
+
           </p>
         </div>
+
+       
         <div className={styles.projects_items}>
-          <a
-            href="https://github.com/Puliphat/movie-project"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={movieProject} alt="Streaming Movie Project" />
-            </Tilt>
-          </a>
-          <h3>Streaming Movie</h3>
-          <p>
-            Movie streaming website developed with PHP for server-side logic,
-            MySQL for database management, and jQuery for frontend
-            interactivity. It includes a user authentication system that
-            requires users to register and log in before streaming movies.
-          </p>
-        </div>
-        <div className={styles.projects_items}>
-          <a
-            href="https://github.com/Puliphat/detect-eye-and-smile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={detectProject} alt="Eye and Smile Detection Project" />
-            </Tilt>
-          </a>
-          <h3>Detect Eye and Smile</h3>
-          <p>
-            This project is an AI-based facial detection system built with
-            Python, Keras, TensorFlow, and OpenCV. It detects facial expressions
-            such as smiles and identifies eye states open or closed
-          </p>
-        </div>
-          <div className={styles.projects_items}>
           <a
             href="https://poke-deck-pearl.vercel.app/"
             target="_blank"
@@ -114,6 +141,7 @@ function Projects() {
             for organizing this workshop.
           </p>
         </div>
+
         <div className={styles.projects_items}>
           <a
             href="https://github.com/Puliphat/restful-api"
