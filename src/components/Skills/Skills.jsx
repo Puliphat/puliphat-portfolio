@@ -3,7 +3,7 @@ import styles from './Skills.module.css'
 import { FaHtml5, FaCss3Alt, FaJs, FaReact, FaGitAlt, FaNode, FaDocker, FaPhp, FaBootstrap } from 'react-icons/fa6'
 import { GrMysql } from "react-icons/gr";
 import { BiLogoTailwindCss } from "react-icons/bi";
-import { SiPostman, SiExpress } from "react-icons/si";
+import { SiPostman, SiExpress ,SiMongodb } from "react-icons/si";
 import { RiNextjsFill } from "react-icons/ri";
 import useInView from '../../hooks/useInView'
 
@@ -61,6 +61,11 @@ const backendSkills = [
     name: "MySQL", 
     icon: <GrMysql style={{ color: '#000000' }} />,
     description: "Relational database management" 
+  },
+  { 
+    name: "MongoDB", 
+    icon: <SiMongodb style={{ color: '#47A248' }} />,
+    description: "NoSQL database management" 
   },
   { 
     name: "PHP", 

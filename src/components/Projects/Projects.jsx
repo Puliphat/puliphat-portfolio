@@ -10,6 +10,7 @@ import pokeProject from "../img/poke.jpg";
 import restfulProject from "../img/restful-api.jpg";
 import pokeProject2 from "../img/poke-next.jpg";
 import portfolioV2 from "../img/port_v2.jpg";
+import dashboard from "../img/dashboard.jpg";
 import useInView from '../../hooks/useInView';
 
 function Projects() {
@@ -21,12 +22,13 @@ function Projects() {
        
         Projects & Workshop
       </div>
+      
       <div 
         ref={projectsRef}
         className={`${styles.projects_list} ${isProjectsInView ? styles.animate : ''}`}
       >
-       
-        <div className={styles.projects_items}>
+
+<div className={styles.projects_items}>
           <a
             href="https://github.com/Puliphat/movie-project"
             target="_blank"
@@ -47,26 +49,6 @@ function Projects() {
 
         <div className={styles.projects_items}>
           <a
-            href="https://portfolio-v2-gamma-beige.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={portfolioV2} alt="Portfolio_V2 Project" />
-            </Tilt>
-          </a>
-          <h3>Portfolio_V2</h3>
-          <p>
-          React-based portfolio with Parallax scroll effects for dynamic, layered movement.
-Page/offset/factor is fine-tuned across key sections for better structure.
-Parallax is limited on mobile, but CSS responsive design is applied.
-
-
-          </p>
-        </div>
-
-        <div className={styles.projects_items}>
-          <a
             href="https://github.com/Puliphat/detect-eye-and-smile"
             target="_blank"
             rel="noopener noreferrer"
@@ -80,6 +62,27 @@ Parallax is limited on mobile, but CSS responsive design is applied.
             This project is an AI-based facial detection system built with
             Python, Keras, TensorFlow, and OpenCV. It detects facial expressions
             such as smiles and identifies eye states open or closed
+          </p>
+        </div>
+
+        
+        <div className={styles.projects_items}>
+          <a
+            href="https://portfolio-v2-gamma-beige.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={portfolioV2} alt="Portfolio_V2 Project" />
+            </Tilt>
+          </a>
+          <h3>Portfolio_V2</h3>
+          <p>
+          React-based portfolio with Parallax scroll effects for dynamic, layered movement.
+          Page/offset/factor is fine-tuned across key sections for better structure.
+          Parallax is limited on mobile, but CSS responsive design is applied.
+
+
           </p>
         </div>
 
@@ -141,6 +144,24 @@ Parallax is limited on mobile, but CSS responsive design is applied.
             for organizing this workshop.
           </p>
         </div>
+
+        <div className={styles.projects_items}>
+          <a
+            href="https://github.com/Puliphat/dashboard-nextjs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={dashboard} alt="Dashboard Next.js Project" />
+            </Tilt>
+          </a>
+          <h3>Dashboard Next.js </h3>
+          <p>
+          This Dashboard Web App project is currently under development and not yet ready for use.
+              (โปรเจคนี้อยู่ในระหว่างการพัฒนา..)
+          </p>
+        </div>
+
 
         <div className={styles.projects_items}>
           <a
