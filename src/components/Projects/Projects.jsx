@@ -28,7 +28,55 @@ function Projects() {
         className={`${styles.projects_list} ${isProjectsInView ? styles.animate : ''}`}
       >
 
-<div className={styles.projects_items}>
+        <div className={styles.projects_items}>
+          <a
+            href="https://github.com/Puliphat/dashboard-nextjs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={dashboard} alt="Dashboard Next.js Project" />
+            </Tilt>
+          </a>
+          <h3>Dashboard Next.js </h3>
+          <p>
+          This Dashboard Web App project is currently under development and not yet ready for use.
+              (โปรเจคนี้อยู่ในระหว่างการพัฒนา..)
+          </p>
+        </div>
+
+        <div className={styles.projects_items}>
+          <a
+            href="https://pokemon-next-js-nu.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={pokeProject2} alt="Poke Next.js Project" />
+            </Tilt>
+          </a>
+          
+          <div style={{ display: "flex", justifyContent: "center" }}>
+            <h3>Pokémon Next.js </h3>
+
+            <a
+              href="https://github.com/Puliphat/Poke-NextJS"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaGithub className={styles.icon} style={{ color: "#181717" }} />
+            </a>
+          </div>
+          <p>
+          Built a responsive Pokédex using Next.js and Tailwind CSS with dynamic data from PokeAPI.
+          Used React hooks and Next.js features (SSR, Link, Image) with error handling and SEO.
+          Based on a workshop organized by Milerdev.
+
+          </p>
+        </div>
+
+        
+        <div className={styles.projects_items}>
           <a
             href="https://github.com/Puliphat/movie-project"
             target="_blank"
@@ -47,74 +95,6 @@ function Projects() {
           </p>
         </div>
 
-        <div className={styles.projects_items}>
-          <a
-            href="https://github.com/Puliphat/detect-eye-and-smile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={detectProject} alt="Eye and Smile Detection Project" />
-            </Tilt>
-          </a>
-          <h3>Detect Eye and Smile</h3>
-          <p>
-            This project is an AI-based facial detection system built with
-            Python, Keras, TensorFlow, and OpenCV. It detects facial expressions
-            such as smiles and identifies eye states open or closed
-          </p>
-        </div>
-
-        
-        <div className={styles.projects_items}>
-          <a
-            href="https://portfolio-v2-gamma-beige.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={portfolioV2} alt="Portfolio_V2 Project" />
-            </Tilt>
-          </a>
-          <h3>Portfolio_V2</h3>
-          <p>
-          React-based portfolio with Parallax scroll effects for dynamic, layered movement.
-          Page/offset/factor is fine-tuned across key sections for better structure.
-          Parallax is limited on mobile, but CSS responsive design is applied.
-
-
-          </p>
-        </div>
-
-        <div className={styles.projects_items}>
-          <a
-            href="https://pokemon-next-js-nu.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={pokeProject2} alt="Poke Next.js Project" />
-            </Tilt>
-          </a>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <h3>Pokémon Next.js </h3>
-
-            <a
-              href="https://github.com/Puliphat/Poke-NextJS"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className={styles.icon} style={{ color: "#181717" }} />
-            </a>
-          </div>
-          <p>
-           Built a responsive Pokédex web app using Next.js and Tailwind CSS, with dynamic Pokémon data from PokeAPI. Leveraged React hooks and Next.js components like useState, useEffect, 
-           Link, and Image, with error handling and SEO support via SSR.
-
-          </p>
-        </div>
-
-       
         <div className={styles.projects_items}>
           <a
             href="https://poke-deck-pearl.vercel.app/"
@@ -145,23 +125,6 @@ function Projects() {
           </p>
         </div>
 
-        <div className={styles.projects_items}>
-          <a
-            href="https://github.com/Puliphat/dashboard-nextjs"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={dashboard} alt="Dashboard Next.js Project" />
-            </Tilt>
-          </a>
-          <h3>Dashboard Next.js </h3>
-          <p>
-          This Dashboard Web App project is currently under development and not yet ready for use.
-              (โปรเจคนี้อยู่ในระหว่างการพัฒนา..)
-          </p>
-        </div>
-
 
         <div className={styles.projects_items}>
           <a
@@ -182,23 +145,27 @@ function Projects() {
             Mikelopster for organizing this workshop.
           </p>
         </div>
-          <div className={styles.projects_items}>
+
+
+        <div className={styles.projects_items}>
           <a
-            href="https://github.com/Puliphat/search-travel"
+            href="https://github.com/Puliphat/detect-eye-and-smile"
             target="_blank"
             rel="noopener noreferrer"
           >
             <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={travelProject} alt="Search Travel Project" />
+              <img src={detectProject} alt="Eye and Smile Detection Project" />
             </Tilt>
           </a>
-          <h3>Search Travel</h3>
+          <h3>Detect Eye and Smile</h3>
           <p>
-            Full-stack web application using Node.js and MySQL to provide data
-            retrieval API. The frontend uses React and React Data Table
-            Component to display and search data dynamically.
+            This project is an AI-based facial detection system built with
+            Python, Keras, TensorFlow, and OpenCV. It detects facial expressions
+            such as smiles and identifies eye states open or closed
           </p>
         </div>
+
+
         <div className={styles.projects_items}>
           <a
             href="https://github.com/Puliphat/minishop"
@@ -217,6 +184,26 @@ function Projects() {
             mock JSON API to practice DOM manipulation and event handling.
           </p>
         </div>
+
+          <div className={styles.projects_items}>
+          <a
+            href="https://github.com/Puliphat/search-travel"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={travelProject} alt="Search Travel Project" />
+            </Tilt>
+          </a>
+          <h3>Search Travel</h3>
+          <p>
+            Full-stack web application using Node.js and MySQL to provide data
+            retrieval API. The frontend uses React and React Data Table
+            Component to display and search data dynamically.
+          </p>
+        </div>
+     
+
       </div>
     </div>
   );
