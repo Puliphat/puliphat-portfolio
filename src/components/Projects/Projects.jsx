@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "./Projects.module.css";
 import Tilt from "react-parallax-tilt";
-import { FaGithub } from "react-icons/fa6";
 import movieProject from "../img/PHP_project.jpg";
 import detectProject from "../img/detect.jpg";
 import travelProject from "../img/search-travel.jpg";
@@ -11,23 +10,21 @@ import restfulProject from "../img/restful-api.jpg";
 import pokeProject2 from "../img/poke-next.jpg";
 import portfolioV2 from "../img/port_v2.jpg";
 import dashboard from "../img/dashboard.jpg";
-import useInView from '../../hooks/useInView';
+import useInView from "../../hooks/useInView";
 
 function Projects() {
   const [projectsRef, isProjectsInView] = useInView({ threshold: 0.1 });
-  
+
   return (
     <div id="projects" className={styles.projects_con}>
-      <div className={styles.projects_title}>
-       
-        Projects & Workshop
-      </div>
-      
-      <div 
-        ref={projectsRef}
-        className={`${styles.projects_list} ${isProjectsInView ? styles.animate : ''}`}
-      >
+      <div className={styles.projects_title}>Projects & Workshop</div>
 
+      <div
+        ref={projectsRef}
+        className={`${styles.projects_list} ${
+          isProjectsInView ? styles.animate : ""
+        }`}
+      >
         <div className={styles.projects_items}>
           <a
             href="https://github.com/Puliphat/dashboard-nextjs"
@@ -40,14 +37,17 @@ function Projects() {
           </a>
           <h3>Dashboard Next.js </h3>
           <p>
-          This Dashboard Web App project is currently under development and not yet ready for use.
-              (โปรเจคนี้อยู่ในระหว่างการพัฒนา..)
+            Full-stack dashboard app where users can register, log in, and
+            perform full CRUD on posts with images, titles, and descriptions.
+            Admins can view, edit, and delete all users and posts. Built with
+            Next.js, MongoDB, NextAuth, and Tailwind CSS.
           </p>
         </div>
 
+
         <div className={styles.projects_items}>
           <a
-            href="https://pokemon-next-js-nu.vercel.app/"
+            href="https://github.com/Puliphat/Poke-NextJS"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -55,27 +55,53 @@ function Projects() {
               <img src={pokeProject2} alt="Poke Next.js Project" />
             </Tilt>
           </a>
-          
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <h3>Pokémon Next.js </h3>
-
-            <a
-              href="https://github.com/Puliphat/Poke-NextJS"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className={styles.icon} style={{ color: "#181717" }} />
-            </a>
-          </div>
+          <h3>Pokémon Next.js </h3>
           <p>
-          Built a responsive Pokédex using Next.js and Tailwind CSS with dynamic data from PokeAPI.
-          Used React hooks and Next.js features (SSR, Link, Image) with error handling and SEO.
-          Based on a workshop organized by Milerdev.
-
+            Built a responsive Pokédex using Next.js and Tailwind CSS with
+            dynamic data from PokeAPI. Used React hooks and Next.js features
+            (SSR, Link, Image) with error handling and SEO. Based on a workshop
+            organized by Milerdev.
           </p>
         </div>
 
-        
+        <div className={styles.projects_items}>
+          <a
+            href="https://github.com/Puliphat/poke-deck"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={pokeProject} alt="Poke-Deck Project" />
+            </Tilt>
+          </a>
+          <h3>Pokémon Deck </h3>
+          <p>
+            This project is a web app for selecting and saving favorite Pokémon,
+            built with React and Tailwind CSS. It utilizes React Hooks like
+            useState and useEffect, and connects to PokeAPI Credit to Milerdev
+            for organizing this workshop.
+          </p>
+        </div>
+
+        <div className={styles.projects_items}>
+          <a
+            href="https://github.com/Puliphat/restful-api"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={restfulProject} alt="RESTful-API Project" />
+            </Tilt>
+          </a>
+          <h3>RESTful-API</h3>
+          <p>
+            This workshop focuses on creating a RESTful API for the backend
+            using CRUD operations for user form data. build the API and test it
+            with Postman before integrating it with the frontend. Credit to
+            Mikelopster for organizing this workshop.
+          </p>
+        </div>
+
         <div className={styles.projects_items}>
           <a
             href="https://github.com/Puliphat/movie-project"
@@ -91,61 +117,10 @@ function Projects() {
             Movie streaming website developed with PHP for server-side logic,
             MySQL for database management, and jQuery for frontend
             interactivity. It includes a user authentication system that
-            requires users to register and log in before streaming movies.
+            requires users to register and login before streaming movies This
+            project was developed as a university assignment.
           </p>
         </div>
-
-        <div className={styles.projects_items}>
-          <a
-            href="https://poke-deck-pearl.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={pokeProject} alt="Poke-Deck Project" />
-            </Tilt>
-          </a>
-          <div style={{ display: "flex", justifyContent: "center" }}>
-            <h3>Pokémon Deck </h3>
-
-            <a
-              href="https://github.com/Puliphat/poke-deck"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <FaGithub className={styles.icon} style={{ color: "#181717" }} />
-            </a>
-          </div>
-          <p>
-           
-            This project is a web app for selecting and saving favorite Pokémon,
-            built with React and Tailwind CSS. It utilizes React Hooks like
-            useState and useEffect, and connects to PokeAPI Credit to Milerdev
-            for organizing this workshop.
-          </p>
-        </div>
-
-
-        <div className={styles.projects_items}>
-          <a
-            href="https://github.com/Puliphat/restful-api"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
-              <img src={restfulProject} alt="RESTful-API Project" />
-            </Tilt>
-          </a>
-          <h3>RESTful-API</h3>
-          <p>
-            
-            This workshop focuses on creating a RESTful API for the backend
-            using CRUD operations for user form data. build the API and test it
-            with Postman before integrating it with the frontend. Credit to
-            Mikelopster for organizing this workshop.
-          </p>
-        </div>
-
 
         <div className={styles.projects_items}>
           <a
@@ -162,9 +137,26 @@ function Projects() {
             This project is an AI-based facial detection system built with
             Python, Keras, TensorFlow, and OpenCV. It detects facial expressions
             such as smiles and identifies eye states open or closed
+            project was developed as a university assignment.
           </p>
         </div>
 
+        <div className={styles.projects_items}>
+          <a
+            href="https://github.com/Puliphat/portfolio_V2"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Tilt scale={1.1} transitionSpeed={2500} tiltReverse={true}>
+              <img src={portfolioV2} alt="Portfolio V2 Project" />
+            </Tilt>
+          </a>
+          <h3>Portfolio V2 </h3>
+          <p>
+          A portfolio project experimenting with React Parallax effects and offset settings to create dynamic scrolling interactions.
+          Also focused on responsive design for multiple screen sizes, though responsiveness is still being improved.
+          </p>
+        </div>
 
         <div className={styles.projects_items}>
           <a
@@ -185,7 +177,7 @@ function Projects() {
           </p>
         </div>
 
-          <div className={styles.projects_items}>
+        <div className={styles.projects_items}>
           <a
             href="https://github.com/Puliphat/search-travel"
             target="_blank"
@@ -202,8 +194,6 @@ function Projects() {
             Component to display and search data dynamically.
           </p>
         </div>
-     
-
       </div>
     </div>
   );
